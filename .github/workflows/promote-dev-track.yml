@@ -44,7 +44,16 @@ jobs:
 
       - name: Update file permissions
         run: sudo chmod -R a+rwx ${{ env.TRACK_DIR }}/${{ inputs.slug }}
-
+      
+      - name: New Dev File create
+        run: |
+          cd ${{ env.TRACK_DIR }}
+          touch track-test-slugs.yml
+          # Clear track-test-slugs.yml
+          echo "---" > track-test-slugs.yml
+          echo "tracks:" >> track-test-slugs.yml
+          echo "  - { slug: ${{ inputs.slug }} , id: ${{ env.ID }} }" >>track-test-slugs.yml
+          
       - name: Promote dev tracks
         uses: ./.github/actions/track-promote
         with:
