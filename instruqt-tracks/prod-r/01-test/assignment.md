@@ -1,6 +1,6 @@
 ---
 slug: test
-id: udmupeqbcuop
+id: cclbzhtoa15t
 type: challenge
 title: test
 teaser: Learn how to build an image using a Dockerfile
