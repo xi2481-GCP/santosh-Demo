@@ -77,6 +77,7 @@ jobs:
         if: steps.track-pull.outcome == 'success'
       
       - name: Track Test
+        id: track-test
         uses: ./.github/actions/track-test
         with:
           path: ${{ env.TRACK_DIR }}/${{ matrix.tracks.slug }}
@@ -86,5 +87,4 @@ jobs:
         uses: ./.github/actions/track-delete
         with:
           path: ${{ env.TRACK_DIR }}/${{ matrix.tracks.slug }}
-        if: steps.track-pull.outcome == 'success'
-        
+        if: steps.track-test.outcome == 'success'
