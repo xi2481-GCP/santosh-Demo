@@ -15,7 +15,7 @@ env:
   # have a track-slugs.yml file in your tracks directory.
   TRACK_DIR: instruqt-tracks
   INSTRUQT_TOKEN: ${{ secrets.INSTRUQT_TOKEN }}
-  Delete_Dev_Track: false
+  Delete_Dev_Track: true
 
 
 concurrency:
