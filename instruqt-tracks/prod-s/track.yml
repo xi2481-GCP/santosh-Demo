@@ -1,13 +1,14 @@
-slug: prod-s
-id: 0ykcrlddoned
-title: prod-s
+slug: prod-s-dev
+id: fevvzyxf3cfj
+title: DEV - prod-s
 teaser: Use a virtual machine (VM) as a sandbox host
 description: '# Test'
 icon: https://cdn.instruqt.com/assets/templates/docker.png
 tags:
-- prod
+- dev
 owner: instruqt-support
 developers:
 - santosh@instruqt.com
-checksum: "3718155424774481435"
+maintenance: true
+checksum: "584516743797279217"
 timelimit: 1800
