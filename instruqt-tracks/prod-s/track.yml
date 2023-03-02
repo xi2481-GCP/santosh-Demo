@@ -2,12 +2,13 @@ slug: prod-s
 id: 0ykcrlddoned
 title: prod-s
 teaser: Use a virtual machine (VM) as a sandbox host
-description: '# Test'
+description: '# DEMO TEST'
 icon: https://cdn.instruqt.com/assets/templates/docker.png
 tags:
 - prod
 owner: instruqt-support
 developers:
 - santosh@instruqt.com
-checksum: "3718155424774481435"
+maintenance: false
+checksum: "9815065894579137087"
 timelimit: 1800
