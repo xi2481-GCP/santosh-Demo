@@ -89,4 +89,4 @@ jobs:
         uses: ./.github/actions/track-delete
         with:
           path: ${{ env.TRACK_DIR }}/${{ matrix.tracks.slug }}
-        if: steps.track-test.outcome == 'success' || env.Delete_Dev_Track == 'true'
+        if: (steps.track-test.outcome == 'success' && env.Delete_Dev_Track == 'true')
