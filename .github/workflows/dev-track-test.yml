@@ -7,7 +7,7 @@
 # to the same organization.
 #
 ##############################################################################
-name: development
+name: Development
 
 env:
   # Set these values to match your environment. Your token should be 
@@ -15,6 +15,8 @@ env:
   # have a track-slugs.yml file in your tracks directory.
   TRACK_DIR: instruqt-tracks
   INSTRUQT_TOKEN: ${{ secrets.INSTRUQT_TOKEN }}
+  Delete_Dev_Track: false
+
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
@@ -87,4 +89,4 @@ jobs:
         uses: ./.github/actions/track-delete
         with:
           path: ${{ env.TRACK_DIR }}/${{ matrix.tracks.slug }}
-        if: steps.track-test.outcome == 'success'
+        if: steps.track-test.outcome == 'success' || env.Delete_Dev_Track == 'true'
